@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSJ Multiservice – Nettoyage, Rénovation, Débarras, Conciergerie en Île-de-France</title>
+    <meta name="description" content="NSJ Multiservice : votre interlocuteur unique pour le nettoyage, nettoyage extrême, débarras, rénovation, conciergerie, serrurerie, transport, bricolage, espaces verts et dératisation en Île-de-France. Devis gratuit sous 24h.">
+    <meta name="keywords" content="entreprise de nettoyage, nettoyage extrême, débarras maison, rénovation appartement, conciergerie, multiservice, serrurerie, espaces verts, dératisation, transport accompagné, Chaville, Viroflay, Versailles, Boulogne-Billancourt, Paris, Île-de-France">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="NSJ Multiservice – Votre interlocuteur unique en Île-de-France">
+    <meta property="og:description" content="Nettoyage, rénovation, débarras, conciergerie, transport et plus. Devis gratuit sous 24h.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.nsj-multiservice.fr">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FFF7ED',
+                            100: '#FFEDD5',
+                            200: '#FED7AA',
+                            300: '#FDBA74',
+                            400: '#FB923C',
+                            500: '#F97316',
+                            600: '#EA580C',
+                            700: '#C2410C',
+                            800: '#9A3412',
+                            900: '#7C2D12',
+                        },
+                        dark: {
+                            50: '#1a1a1a',
+                            100: '#151515',
+                            200: '#111111',
+                            300: '#0d0d0d',
+                            400: '#0a0a0a',
+                            500: '#050505',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-300 text-white antialiased">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center font-bold text-white text-lg group-hover:bg-brand-400 transition-colors">N</div>
+                    <div>
+                        <span class="text-white font-semibold text-lg tracking-tight block leading-none">NSJ</span>
+                        <span class="text-brand-400 text-[10px] font-medium tracking-[0.2em] uppercase">Multiservice</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#services" class="text-neutral-400 hover:text-white text-sm font-medium transition-colors">Services</a>
+                    <a href="#galerie" class="text-neutral-400 hover:text-white text-sm font-medium transition-colors">Réalisations</a>
+                    <a href="#avis" class="text-neutral-400 hover:text-white text-sm font-medium transition-colors">Avis</a>
+                    <a href="#apropos" class="text-neutral-400 hover:text-white text-sm font-medium transition-colors">À propos</a>
+                    <a href="#contact" class="text-neutral-400 hover:text-white text-sm font-medium transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA + Mobile Toggle -->
+                <div class="flex items-center gap-3">
+                    <a href="#devis" class="hidden sm:inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all hover:shadow-lg hover:shadow-brand-500/25">
+                        Devis gratuit
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <button id="menuToggle" class="lg:hidden p-2 text-neutral-400 hover:text-white transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-full bg-dark-200 z-[60] border-l border-white/10 p-6 flex flex-col">
+        <div class="flex items-center justify-between mb-10">
+            <span class="text-white font-semibold text-lg">Menu</span>
+            <button id="menuClose" class="p-2 text-neutral-400 hover:text-white transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-1">
+            <a href="#services" class="mobile-link text-neutral-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Services</a>
+            <a href="#galerie" class="mobile-link text-neutral-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Réalisations</a>
+            <a href="#avis" class="mobile-link text-neutral-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Avis clients</a>
+            <a href="#apropos" class="mobile-link text-neutral-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-xl text-base font-medium transition-all">À propos</a>
+            <a href="#contact" class="mobile-link text-neutral-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Contact</a>
+        </div>
+        <div class="mt-auto">
+            <a href="#devis" class="mobile-link flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white w-full py-3.5 rounded-full text-base font-medium transition-all">
+                Devis gratuit
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </div>
+    <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-[55] hidden"></div>
+
+
+    <!-- ===== HERO ===== -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80" alt="Services de nettoyage NSJ Multiservice" class="absolute inset-0 w-full h-full object-cover">
+        <div class="hero-gradient absolute inset-0"></div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-8">
+                <span class="w-2 h-2 bg-brand-500 rounded-full animate-pulse"></span>
+                <span class="text-xs font-medium text-neutral-300 tracking-wide">Île-de-France · Devis gratuit sous 24h</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6">
+                Votre interlocuteur
+                <span class="block text-brand-500">unique</span>
+                pour tous vos besoins
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Nettoyage, rénovation, débarras, conciergerie, transport et services aux particuliers et professionnels.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#devis" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full text-base font-semibold transition-all hover:shadow-xl hover:shadow-brand-500/30 cta-glow">
+                    Obtenir un devis gratuit
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/10 text-white px-8 py-4 rounded-full text-base font-medium transition-all">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    Nous contacter
+                </a>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mt-14 text-neutral-500 text-sm">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-500"></i>
+                    <span>Assurance professionnelle</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-5 h-5 text-brand-500"></i>
+                    <span>Réponse sous 24h</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-brand-500"></i>
+                    <span>Toute l'Île-de-France</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-500">
+            <span class="text-xs tracking-widest uppercase">Découvrir</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 animate-bounce"></i>
+        </div>
+    </section>
+
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="py-20 md:py-28 bg-dark-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block text-brand-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Nos expertises</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Nos Services</h2>
+                <p class="text-neutral-500 max-w-xl mx-auto text-base md:text-lg">Des solutions complètes pour répondre à tous vos besoins, avec un seul interlocuteur.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
+
+                <!-- Service 1: Conciergerie -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="key-round" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Conciergerie</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Gestion complète de vos biens : gestion des clés, courrier, surveillance et coordination des interventions.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2: Entretien & Nettoyage -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Entretien & Nettoyage</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Nettoyage régulier de bureaux, copropriétés, commerces et logements. Ponctuel ou contractuel.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3: Nettoyage Extrême -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="flame" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Nettoyage Extrême</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Intervention sur sites insalubres, after-death, squat, hoarding. Traitement professionnel et discrétion totale.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4: Débarras -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="package-x" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Débarras</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Vide maison, appartement, cave, grenier. Tri, valorisation, recyclage et évacuation en toute conformité.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5: Rénovation -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="hammer" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Rénovation</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Rénovation complète d'appartements et maisons. Peinture, plomberie, électricité, carrelage et plus.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6: Tous Corps d'État -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="wrench" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Tous Corps d'État</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Intervention polyvalente couvrant tous les métiers du bâtiment pour vos projets de A à Z.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 7: Serrurerie -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="lock" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Serrurerie</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Ouverture de portes, remplacement de serrures, installation de blindages. Intervention rapide 7j/7.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 8: Transport -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="truck" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Transport</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Transport de marchandises, déménagement, livraison et transport accompagné pour vos déplacements.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 9: Bricolage -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="screwdriver" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Bricolage</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Petits travaux, montages de meubles, réparations diverses. Main-d'œuvre qualifiée à votre service.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 10: Espaces Verts -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="trees" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Espaces Verts</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Taille, tonte, plantation, entretien de jardins et espaces verts. Création et aménagement paysager.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 11: Dératisation -->
+                <div class="service-card bg-dark-50 border border-white/5 rounded-2xl p-6 group cursor-pointer fade-in">
+                    <div class="service-icon w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-5 transition-all duration-300">
+                        <i data-lucide="bug" class="w-6 h-6 text-brand-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Dératisation & Désinsectisation</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-5">Élimination des nuisibles : rats, souris, cafards, punaises de lit. Traitement professionnel certifié.</p>
+                    <a href="#devis" class="inline-flex items-center gap-1.5 text-brand-500 text-sm font-medium group/link">
+                        Demander un devis
+                        <i data-lucide="arrow-right" class="w-4 h-4 service-arrow opacity-0 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Service 12: CTA Card -->
+                <div class="bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl p-6 flex flex-col justify-center items-center text-center fade-in">
+                    <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-5">
+                        <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Besoin d'un service ?</h3>
+                    <p class="text-white/80 text-sm mb-5">Contactez-nous pour discuter de votre projet.</p>
+                    <a href="#devis" class="inline-flex items-center gap-2 bg-white text-brand-600 px-6 py-3 rounded-full text-sm font-semibold hover:bg-neutral-100 transition-colors">
+                        Devis gratuit
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== POURQUOI NOUS CHOISIR ===== -->
+    <section class="py-20 md:py-28 bg-dark-400 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="inline-block text-brand-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Nos engagements</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Pourquoi Nous Choisir</h2>
+                <p class="text-neutral-500 max-w-xl mx-auto text-base md:text-lg">Une expérience client irréprochable, de la première prise de contact à la fin de la prestation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Réactivité -->
+                <div class="text-center fade-in group">
+                    <div class="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="zap" class="w-7 h-7 text-brand-500"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Réactivité</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">Intervention rapide et disponibilité 6 jours sur 7 pour répondre à vos urgences.</p>
+                </div>
+
+                <!-- Professionnalisme -->
+                <div class="text-center fade-in group">
+                    <div class="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="award" class="w-7 h-7 text-brand-500"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Professionnalisme</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">Équipes qualifiées, équipements professionnels et méthodes éprouvées.</p>
+                </div>
+
+                <!-- Devis gratuit sous 24h -->
+                <div class="text-center fade-in group">
+                    <div class="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="file-text" class="w-7 h-7 text-brand-500"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Devis Gratuit Sous 24h</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">Réponse rapide avec un devis détaillé, transparent et sans engagement.</p>
+                </div>
+
+                <!-- Satisfaction Client -->
+                <div class="text-center fade-in group">
+                    <div class="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="heart-handshake" class="w-7 h-7 text-brand-500"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Satisfaction Client</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">Votre satisfaction est notre priorité. Nous ne quittons pas le chantier tant que vous n'êtes pas satisfait.</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/5 fade-in">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-brand-500 counter" data-target="500">0</div>
+                    <div class="text-neutral-500 text-sm mt-1">Interventions réalisées</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-brand-500 counter" data-target="98">0</div>
+                    <div class="text-neutral-500 text-sm mt-1">% Clients satisfaits</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-brand-500 counter" data-target="11">0</div>
+                    <div class="text-neutral-500 text-sm mt-1">Services proposés</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-brand-500 counter" data-target="24">0</div>
+                    <div class="text-neutral-500 text-sm mt-1">Heures pour un devis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== GALERIE AVANT / APRÈS ===== -->
+    <section id="galerie" class="py-20 md:py-28 bg-dark-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12 fade-in">
+                <span class="inline-block text-brand-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Portfolio</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Nos Réalisations</h2>
+                <p class="text-neutral-500 max-w-xl mx-auto text-base md:text-lg">Découvrez nos transformations avant / après. Glissez le curseur pour comparer, double-cliquez pour agrandir.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-10 fade-in">
+                <button class="filter-btn active bg-brand-500 text-white border border-brand-500 px-5 py-2.5 rounded-full text-sm font-medium transition-all" data-filter="all">Tous</button>
+                <button class="filter-btn bg-dark-50 text-neutral-400 border border-white/10 px-5 py-2.5 rounded-full text-sm font-medium hover:border-brand-500/50 hover:text-white transition-all" data-filter="nettoyage">Nettoyage</button>
+                <button class="filter-btn bg-dark-50 text-neutral-400 border border-white/10 px-5 py-2.5 rounded-full text-sm font-medium hover:border-brand-500/50 hover:text-white transition-all" data-filter="debarras">Débarras</button>
+                <button class="filter-btn bg-dark-50 text-neutral-400 border border-white/10 px-5 py-2.5 rounded-full text-sm font-medium hover:border-brand-500/50 hover:text-white transition-all" data-filter="renovation">Rénovation</button>
+                <button class="filter-btn bg-dark-50 text-neutral-400 border border-white/10 px-5 py-2.5 rounded-full text-sm font-medium hover:border-brand-500/50 hover:text-white transition-all" data-filter="espaces-verts">Espaces Verts</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+                <!-- Item 1: Nettoyage -->
+                <div class="gallery-item visible-item fade-in" data-category="nettoyage">
+                    <div class="before-after-container rounded-2xl aspect-[4/3] relative">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Après nettoyage" class="after-img">
+                        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80" alt="Avant nettoyage" class="before-img" style="clip-path: inset(0 50% 0 0);">
+                        <div class="slider-line" style="left: 50%;"></div>
+                        <div class="slider-handle" style="left: 50%;">
+                            <i data-lucide="move-horizontal" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="label label-before">Avant</span>
+                        <span class="label label-after">Après</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mt-3 font-medium">Nettoyage extrême – Appartement insalubre</p>
+                </div>
+
+                <!-- Item 2: Débarras -->
+                <div class="gallery-item visible-item fade-in" data-category="debarras">
+                    <div class="before-after-container rounded-2xl aspect-[4/3] relative">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Après débarras" class="after-img">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Avant débarras" class="before-img" style="clip-path: inset(0 50% 0 0);">
+                        <div class="slider-line" style="left: 50%;"></div>
+                        <div class="slider-handle" style="left: 50%;">
+                            <i data-lucide="move-horizontal" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="label label-before">Avant</span>
+                        <span class="label label-after">Après</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mt-3 font-medium">Débarras complet – Maison surchargée</p>
+                </div>
+
+                <!-- Item 3: Rénovation -->
+                <div class="gallery-item visible-item fade-in" data-category="renovation">
+                    <div class="before-after-container rounded-2xl aspect-[4/3] relative">
+                        <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=800&q=80" alt="Après rénovation" class="after-img">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80" alt="Avant rénovation" class="before-img" style="clip-path: inset(0 50% 0 0);">
+                        <div class="slider-line" style="left: 50%;"></div>
+                        <div class="slider-handle" style="left: 50%;">
+                            <i data-lucide="move-horizontal" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="label label-before">Avant</span>
+                        <span class="label label-after">Après</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mt-3 font-medium">Rénovation complète – Cuisine et salle de bain</p>
+                </div>
+
+                <!-- Item 4: Espaces Verts -->
+                <div class="gallery-item visible-item fade-in" data-category="espaces-verts">
+                    <div class="before-after-container rounded-2xl aspect-[4/3] relative">
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80" alt="Après aménagement" class="after-img">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80" alt="Avant aménagement" class="before-img" style="clip-path: inset(0 50% 0 0);">
+                        <div class="slider-line" style="left: 50%;"></div>
+                        <div class="slider-handle" style="left: 50%;">
+                            <i data-lucide="move-horizontal" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="label label-before">Avant</span>
+                        <span class="label label-after">Après</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mt-3 font-medium">Aménagement jardin – Taille et nettoyage</p>
+                </div>
+
+                <!-- Item 5: Nettoyage -->
+                <div class="gallery-item visible-item fade-in" data-category="nettoyage">
+                    <div class="before-after-container rounded-2xl aspect-[4/3] relative">
+                        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80" alt="Après nettoyage" class="after-img">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Avant nettoyage" class="before-img" style="clip-path: inset(0 50% 0 0);">
+                        <div class="slider-line" style="left: 50%;"></div>
+                        <div class="slider-handle" style="left: 50%;">
+                            <i data-lucide="move-horizontal" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="label label-before">Avant</span>
+                        <span class="label label-after">Après</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mt-3 font-medium">Nettoyage fin de chantier – Salle de bain</p>
+                </div>
+
+                <!-- Item 6: Rénovation -->
+                <div class="gallery-item visible-item fade-in" data-category="renovation">
+                    <div class="before-after-container rounded-2xl aspect-[4/3] relative">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80" alt="Après rénovation" class="after-img">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Avant rénovation" class="before-img" style="clip-path: inset(0 50% 0 0);">
+                        <div class="slider-line" style="left: 50%;"></div>
+                        <div class="slider-handle" style="left: 50%;">
+                            <i data-lucide="move-horizontal" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="label label-before">Avant</span>
+                        <span class="label label-after">Après</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mt-3 font-medium">Rénovation peinture – Bureaux</p>
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12 fade-in">
+                <a href="#devis" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full text-base font-semibold transition-all hover:shadow-xl hover:shadow-brand-500/25">
+                    Demander un devis pour une prestation similaire
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== AVIS CLIENTS ===== -->
+    <section id="avis" class="py-20 md:py-28 bg-dark-400 border-y border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-14 fade-in">
+                <span class="inline-block text-brand-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Témoignages</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Ce Que Disent Nos Clients</h2>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <div class="flex">
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-500 text-brand-500"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-500 text-brand-500"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-500 text-brand-500"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-500 text-brand-500"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-500 text-brand-500"></i>
+                    </div>
+                    <span class="text-white font-semibold">4.9/5</span>
+                    <span class="text-neutral-500 text-sm">sur Google Reviews</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="relative">
+            <div id="reviewCarousel" class="carousel-track">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 md:p-8 h-full mx-2">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">"Service exceptionnel pour le nettoyage extrême de mon appartement. L'équipe était professionnelle, discrète et le résultat est impeccable. Je recommande à 100% !"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-brand-500/20 rounded-full flex items-center justify-center text-brand-500 font-semibold text-sm">SL</div>
+                            <div>
+                                <div class="text-white font-medium text-sm">Sophie L.</div>
+                                <div class="text-neutral-500 text-xs">Chaville · Nettoyage extrême</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 md:p-8 h-full mx-2">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">"NSJ a géré le débarras de la maison de mon père rapidement et avec beaucoup de respect. Le devis était clair, sans surprise. Très satisfait du travail accompli."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-brand-500/20 rounded-full flex items-center justify-center text-brand-500 font-semibold text-sm">MD</div>
+                            <div>
+                                <div class="text-white font-medium text-sm">Marc D.</div>
+                                <div class="text-neutral-500 text-xs">Viroflay · Débarras</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 md:p-8 h-full mx-2">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">"Rénovation complète de notre appartement : peinture, plomberie, électricité. Un seul interlocuteur, c'est tellement plus simple ! Travail de qualité et dans les délais."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-brand-500/20 rounded-full flex items-center justify-center text-brand-500 font-semibold text-sm">AB</div>
+                            <div>
+                                <div class="text-white font-medium text-sm">Amina B.</div>
+                                <div class="text-neutral-500 text-xs">Versailles · Rénovation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 md:p-8 h-full mx-2">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">"Nous faisons appel à NSJ pour l'entretien de nos copropriétés. Ponctuels, efficaces et toujours souriants. Un vrai partenaire de confiance."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-brand-500/20 rounded-full flex items-center justify-center text-brand-500 font-semibold text-sm">PG</div>
+                            <div>
+                                <div class="text-white font-medium text-sm">Philippe G.</div>
+                                <div class="text-neutral-500 text-xs">Le Chesnay · Syndic</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 md:p-8 h-full mx-2">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">"Intervention de dératisation rapide et efficace. Le technicien a pris le temps d'expliquer le traitement. Plus aucun problème depuis. Merci NSJ !"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-brand-500/20 rounded-full flex items-center justify-center text-brand-500 font-semibold text-sm">LM</div>
+                            <div>
+                                <div class="text-white font-medium text-sm">Laurent M.</div>
+                                <div class="text-neutral-500 text-xs">Boulogne-Billancourt · Dératisation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 md:p-8 h-full mx-2">
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-brand-500 text-brand-500"></i>
+                        </div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">"Mon jardin était complètement laissé à l'abandon. NSJ l'a transformé en un espace magnifique. Jardinage, taille, plantation : tout était parfait !"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-brand-500/20 rounded-full flex items-center justify-center text-brand-500 font-semibold text-sm">CR</div>
+                            <div>
+                                <div class="text-white font-medium text-sm">Claire R.</div>
+                                <div class="text-neutral-500 text-xs">Paris · Espaces verts</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="flex items-center justify-center gap-4 mt-8">
+                <button id="carouselPrev" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-brand-500 transition-all">
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                <div id="carouselDots" class="flex gap-2"></div>
+                <button id="carouselNext" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-brand-500 transition-all">
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== À PROPOS ===== -->
+    <section id="apropos" class="py-20 md:py-28 bg-dark-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Image -->
+                <div class="relative fade-in">
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7?auto=format&fit=crop&w=800&q=80" alt="Équipe NSJ Multiservice" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    </div>
+                    <!-- Floating Card -->
+                    <div class="absolute -bottom-6 -right-4 md:-right-8 bg-dark-50 border border-white/10 rounded-2xl p-5 shadow-2xl backdrop-blur-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold text-sm">Certifié & Assuré</div>
+                                <div class="text-neutral-500 text-xs">Garantie professionnelle</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative -->
+                    <div class="absolute -top-4 -left-4 w-20 h-20 bg-brand-500/10 rounded-2xl -z-10"></div>
+                </div>
+
+                <!-- Content -->
+                <div class="fade-in">
+                    <span class="inline-block text-brand-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Qui sommes-nous</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">À Propos de NSJ Multiservice</h2>
+                    <p class="text-neutral-400 text-base md:text-lg leading-relaxed mb-6">
+                        NSJ Multiservice accompagne <strong class="text-white">particuliers, professionnels, syndics, agences immobilières, associations et mandataires judiciaires</strong> grâce à une offre complète de services.
+                    </p>
+                    <p class="text-neutral-400 text-base md:text-lg leading-relaxed mb-8">
+                        Notre objectif : <strong class="text-white">simplifier votre vie</strong> avec un interlocuteur unique, compétent et de confiance, capable de répondre à l'ensemble de vos besoins en matière de services, d'entretien et de travaux.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-brand-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                            </div>
+                            <span class="text-neutral-300 text-sm">Particuliers</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-brand-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                            </div>
+                            <span class="text-neutral-300 text-sm">Professionnels</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-brand-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                            </div>
+                            <span class="text-neutral-300 text-sm">Syndics & Copropriétés</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-brand-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                            </div>
+                            <span class="text-neutral-300 text-sm">Agences immobilières</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-brand-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                            </div>
+                            <span class="text-neutral-300 text-sm">Associations</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-brand-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-500"></i>
+                            </div>
+                            <span class="text-neutral-300 text-sm">Mandataires judiciaires</span>
+                        </div>
+                    </div>
+
+                    <a href="#devis" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-7 py-3.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-brand-500/25">
+                        Contactez-nous
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FORMULAIRE DE DEVIS ===== -->
+    <section id="devis" class="py-20 md:py-28 bg-dark-400 border-y border-white/5 relative overflow-hidden">
+        <!-- Decorative -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-brand-500/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-12 fade-in">
+                <span class="inline-block text-brand-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Devis gratuit</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Obtenez Votre Devis Gratuit</h2>
+                <p class="text-neutral-500 max-w-xl mx-auto text-base md:text-lg">Remplissez le formulaire ci-dessous et recevez votre devis personnalisé sous 24h.</p>
+            </div>
+
+            <!-- Form -->
+            <form id="devisForm" class="bg-dark-50 border border-white/5 rounded-3xl p-6 md:p-10 fade-in">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                    <!-- Nom -->
+                    <div>
+                        <label class="block text-neutral-300 text-sm font-medium mb-2">Nom <span class="text-brand-500">*</span></label>
+                        <input type="text" name="nom" required placeholder="Votre nom" class="w-full bg-dark-300 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                    </div>
+                    <!-- Prénom -->
+                    <div>
+                        <label class="block text-neutral-300 text-sm font-medium mb-2">Prénom <span class="text-brand-500">*</span></label>
+                        <input type="text" name="prenom" required placeholder="Votre prénom" class="w-full bg-dark-300 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                    </div>
+                    <!-- Téléphone -->
+                    <div>
+                        <label class="block text-neutral-300 text-sm font-medium mb-2">Téléphone <span class="text-brand-500">*</span></label>
+                        <input type="tel" name="telephone" required placeholder="06 00 00 00 00" class="w-full bg-dark-300 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                    </div>
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-neutral-300 text-sm font-medium mb-2">Email <span class="text-brand-500">*</span></label>
+                        <input type="email" name="email" required placeholder="votre@email.fr" class="w-full bg-dark-300 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                    </div>
+                </div>
+
+                <!-- Adresse -->
+                <div class="mb-5">
+                    <label class="block text-neutral-300 text-sm font-medium mb-2">Adresse du chantier</label>
+                    <input type="text" name="adresse" placeholder="Adresse, code postal, ville" class="w-full bg-dark-300 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                </div>
+
+                <!-- Type de prestation -->
+                <div class="mb-5">
+                    <label class="block text-neutral-300 text-sm font-medium mb-2">Type de prestation <span class="text-brand-500">*</span></label>
+                    <select name="prestation" required class="w-full bg-dark-300 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all appearance-none cursor-pointer" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23737373%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m6 9 6 6 6-6%22/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 12px center; background-size: 18px;">
+                        <option value="" disabled selected class="text-neutral-600">Sélectionnez un service</option>
+                        <option value="conciergerie">Conciergerie</option>
+                        <option value="nettoyage">Entretien & Nettoyage</option>
+                        <option value="nettoyage-extreme">Nettoyage Extrême</option>
+                        <option value="debarras">Débarras</option>
+                        <option value="renovation">Rénovation</option>
+                        <option value="corps-etat">Tous Corps d'État</option>
+                        <option value="serrurerie">Serrurerie</option>
+                        <option value="transport">Transport</option>
+                        <option value="bricolage">Bricolage</option>
+                        <option value="espaces-verts">Espaces Verts</option>
+                        <option value="deratisation">Dératisation & Désinsectisation</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-5">
+                    <label class="block text-neutral-300 text-sm font-medium mb-2">Message <span class="text-brand-500">*</span></label>
+                    <textarea name="message" required rows="4" placeholder="Décrivez votre besoin, la surface, le niveau d'intervention souhaité..." class="w-full bg-dark-300 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all resize-none"></textarea>
+                </div>
+
+                <!-- Photos -->
+                <div class="mb-8">
+                    <label class="block text-neutral-300 text-sm font-medium mb-2">Ajouter des photos <span class="text-neutral-600">(optionnel)</span></label>
+                    <input type="file" name="photos" multiple accept="image/*" class="w-full bg-dark-300 border border-white/10 rounded-xl px-4 py-3.5 text-neutral-400 text-sm focus:outline-none focus:border-brand-500 transition-all">
+                    <p class="text-neutral-600 text-xs mt-2">JPG, PNG. Max 10 Mo par fichier. Plusieurs photos possibles.</p>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-10 py-4 rounded-full text-base font-semibold transition-all hover:shadow-xl hover:shadow-brand-500/30 cta-glow">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                    Obtenir mon devis gratuit
+                </button>
+
+                <p class="text-neutral-600 text-xs mt-4">En soumettant ce formulaire, vous acceptez d'être recontacté par NSJ Multiservice concernant votre demande.</p>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-20 md:py-28 bg-dark-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-14 fade-in">
+                <span class="inline-block text-brand-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">Contact</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Contactez-Nous</h2>
+                <p class="text-neutral-500 max-w-xl mx-auto text-base md:text-lg">Par téléphone, email ou WhatsApp. Nous sommes à votre écoute.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Téléphone -->
+                <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 text-center group hover:border-brand-500/30 transition-all fade-in">
+                    <div class="w-14 h-14 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="phone" class="w-6 h-6 text-brand-500"></i>
+                    </div>
+                    <h3 class="text-white font-semibold mb-1">Téléphone</h3>
+                    <a href="tel:+33600000000" class="text-brand-500 text-sm font-medium hover:text-brand-400 transition-colors">06 00 00 00 00</a>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 text-center group hover:border-brand-500/30 transition-all fade-in">
+                    <div class="w-14 h-14 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="mail" class="w-6 h-6 text-brand-500"></i>
+                    </div>
+                    <h3 class="text-white font-semibold mb-1">Email</h3>
+                    <a href="mailto:contact@nsj-multiservice.fr" class="text-brand-500 text-sm font-medium hover:text-brand-400 transition-colors break-all">contact@nsj-multiservice.fr</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 text-center group hover:border-brand-500/30 transition-all fade-in">
+                    <div class="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/20 transition-colors">
+                        <i data-lucide="message-circle" class="w-6 h-6 text-green-500"></i>
+                    </div>
+                    <h3 class="text-white font-semibold mb-1">WhatsApp</h3>
+                    <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20une%20prestation%20NSJ%20Multiservice." target="_blank" class="text-green-500 text-sm font-medium hover:text-green-400 transition-colors">Envoyer un message</a>
+                </div>
+
+                <!-- Horaires -->
+                <div class="bg-dark-50 border border-white/5 rounded-2xl p-6 text-center group hover:border-brand-500/30 transition-all fade-in">
+                    <div class="w-14 h-14 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="clock" class="w-6 h-6 text-brand-500"></i>
+                    </div>
+                    <h3 class="text-white font-semibold mb-1">Horaires</h3>
+                    <p class="text-neutral-400 text-sm">Lundi au Samedi</p>
+                    <p class="text-brand-500 text-sm font-medium">08h00 – 20h00</p>
+                </div>
+            </div>
+
+            <!-- Zone d'intervention -->
+            <div class="mt-12 bg-dark-50 border border-white/5 rounded-2xl p-6 md:p-8 text-center fade-in">
+                <div class="flex items-center justify-center gap-2 mb-3">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-brand-500"></i>
+                    <h3 class="text-white font-semibold text-lg">Zone d'Intervention</h3>
+                </div>
+                <p class="text-neutral-400 text-sm max-w-3xl mx-auto leading-relaxed">
+                    <strong class="text-neutral-200">Île-de-France</strong> — Chaville, Viroflay, Versailles, Le Chesnay-Rocquencourt, Boulogne-Billancourt, Paris, Hauts-de-Seine, Yvelines et toute l'Île-de-France.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-4">
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Chaville</span>
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Viroflay</span>
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Versailles</span>
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Le Chesnay</span>
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Rocquencourt</span>
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Boulogne-Billancourt</span>
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Paris</span>
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Hauts-de-Seine</span>
+                    <span class="bg-white/5 border border-white/10 text-neutral-300 text-xs px-3 py-1.5 rounded-full">Yvelines</span>
+                    <span class="bg-brand-500/10 border border-brand-500/30 text-brand-500 text-xs px-3 py-1.5 rounded-full font-medium">+ toute l'Île-de-France</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark-500 border-t border-white/5 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <div class="w-9 h-9 bg-brand-500 rounded-lg flex items-center justify-center font-bold text-white text-base">N</div>
+                        <div>
+                            <span class="text-white font-semibold text-base block leading-none">NSJ</span>
+                            <span class="text-brand-400 text-[9px] font-medium tracking-[0.2em] uppercase">Multiservice</span>
+                        </div>
+                    </a>
+                    <p class="text-neutral-500 text-sm leading-relaxed">Votre interlocuteur unique pour tous vos besoins en Île-de-France.</p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Services</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Conciergerie</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Nettoyage & Nettoyage Extrême</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Débarras</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Rénovation & Corps d'État</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Serrurerie</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Espaces Verts & Dératisation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Liens -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Liens</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Nos services</a></li>
+                        <li><a href="#galerie" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Réalisations</a></li>
+                        <li><a href="#avis" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Avis clients</a></li>
+                        <li><a href="#apropos" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">À propos</a></li>
+                        <li><a href="#devis" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Devis gratuit</a></li>
+                        <li><a href="#contact" class="text-neutral-500 text-sm hover:text-brand-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-neutral-500 text-sm">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
+                            <a href="tel:+33600000000" class="hover:text-white transition-colors">06 00 00 00 00</a>
+                        </li>
+                        <li class="flex items-center gap-2 text-neutral-500 text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
+                            <a href="mailto:contact@nsj-multiservice.fr" class="hover:text-white transition-colors break-all">contact@nsj-multiservice.fr</a>
+                        </li>
+                        <li class="flex items-start gap-2 text-neutral-500 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                            <span>Île-de-France<br>Chaville, Versailles, Paris...</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-neutral-500 text-sm">
+                            <i data-lucide="clock" class="w-4 h-4 text-brand-500 flex-shrink-0"></i>
+                            <span>Lun – Sam : 08h00 – 20h00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-neutral-600 text-xs">© 2025 NSJ Multiservice. Tous droits réservés.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-neutral-600 text-xs hover:text-neutral-400 transition-colors">Mentions légales</a>
+                    <a href="#" class="text-neutral-600 text-xs hover:text-neutral-400 transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ===== WHATSAPP FLOTTANT ===== -->
+    <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20une%20prestation%20NSJ%20Multiservice." target="_blank" rel="noopener" id="whatsappBtn" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 group" aria-label="Contacter via WhatsApp">
+        <!-- Pulse Ring -->
+        <div class="absolute inset-0 w-14 h-14 bg-green-500 rounded-full whatsapp-pulse"></div>
+        <!-- Button -->
+        <div class="relative w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 transition-all hover:scale-110">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </div>
+        <!-- Tooltip -->
+        <div class="absolute right-16 bg-dark-50 border border-white/10 text-white text-sm px-4 py-2.5 rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap hidden md:block">
+            Écrivez-nous sur WhatsApp
+            <div class="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-dark-50 border-r border-t border-white/10 rotate-45"></div>
+        </div>
+    </a>
+
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div id="lightbox" class="lightbox fixed inset-0 z-[70] bg-black/95 flex items-center justify-center p-4">
+        <button id="lightboxClose" class="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors z-10">
+            <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-lg">
+    </div>
+
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast" class="toast fixed bottom-24 left-1/2 -translate-x-1/2 z-[80] bg-dark-50 border border-brand-500/30 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 max-w-sm">
+        <div class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+            <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+        </div>
+        <p class="text-sm">Votre demande de devis a bien été envoyée !</p>
+    </div>
+
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "NSJ Multiservice",
+        "description": "Votre interlocuteur unique pour le nettoyage, rénovation, débarras, conciergerie, transport et services en Île-de-France.",
+        "url": "https://www.nsj-multiservice.fr",
+        "telephone": "+33600000000",
+        "email": "contact@nsj-multiservice.fr",
+        "areaServed": [
+            { "@type": "City", "name": "Chaville" },
+            { "@type": "City", "name": "Viroflay" },
+            { "@type": "City", "name": "Versailles" },
+            { "@type": "City", "name": "Le Chesnay-Rocquencourt" },
+            { "@type": "City", "name": "Boulogne-Billancourt" },
+            { "@type": "City", "name": "Paris" },
+            { "@type": "AdministrativeArea", "name": "Hauts-de-Seine" },
+            { "@type": "AdministrativeArea", "name": "Yvelines" },
+            { "@type": "AdministrativeArea", "name": "Île-de-France" }
+        ],
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "08:00",
+            "closes": "20:00"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "50"
+        },
+        "serviceType": [
+            "Conciergerie", "Nettoyage", "Nettoyage Extrême", "Débarras", "Rénovation",
+            "Tous Corps d'État", "Serrurerie", "Transport", "Bricolage", "Espaces Verts", "Dératisation"
+        ]
+    }
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

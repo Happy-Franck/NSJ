@@ -1,0 +1,199 @@
+/* ============================================================
+   NSJ MULTISERVICE — Site 2 (Tailwind + styles personnalisés)
+   ============================================================ */
+
+* { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; }
+
+.glass-nav {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.75) 100%);
+}
+
+.service-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px -15px rgba(249, 115, 22, 0.25);
+}
+.service-card:hover .service-icon {
+    background: #F97316;
+    color: white;
+}
+.service-card:hover .service-arrow {
+    transform: translateX(4px);
+    opacity: 1;
+}
+
+.before-after-container {
+    position: relative;
+    overflow: hidden;
+    cursor: ew-resize;
+    user-select: none;
+}
+.before-after-container .before-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.before-after-container .after-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.before-after-container .slider-line {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 3px;
+    background: #F97316;
+    z-index: 10;
+    pointer-events: none;
+}
+.before-after-container .slider-handle {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px; height: 44px;
+    background: #F97316;
+    border-radius: 50%;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    box-shadow: 0 4px 20px rgba(249,115,22,0.5);
+}
+.before-after-container .label {
+    position: absolute;
+    bottom: 12px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    z-index: 5;
+    pointer-events: none;
+}
+.label-before { left: 12px; background: rgba(0,0,0,0.7); color: #fff; }
+.label-after { right: 12px; background: rgba(249,115,22,0.9); color: #fff; }
+
+.review-card {
+    min-width: 100%;
+    padding: 0 16px;
+}
+@media(min-width: 768px) {
+    .review-card { min-width: 50%; }
+}
+@media(min-width: 1024px) {
+    .review-card { min-width: 33.333%; }
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn.active {
+    background: #F97316;
+    color: white;
+    border-color: #F97316;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.whatsapp-pulse {
+    animation: pulse-ring 2s ease-out infinite;
+}
+@keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cta-glow {
+    box-shadow: 0 0 30px rgba(249,115,22,0.3), 0 0 60px rgba(249,115,22,0.1);
+}
+
+.star-filled { color: #F97316; }
+.star-empty { color: #404040; }
+
+input[type="file"]::file-selector-button {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    margin-right: 12px;
+    transition: all 0.2s;
+}
+input[type="file"]::file-selector-button:hover {
+    background: #F97316;
+    border-color: #F97316;
+}
+
+.mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.toast {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gallery-item {
+    transition: all 0.4s ease;
+}
+.gallery-item.hidden-item {
+    opacity: 0;
+    transform: scale(0.8);
+    position: absolute;
+    pointer-events: none;
+}
+.gallery-item.visible-item {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    pointer-events: auto;
+}
+
+.lightbox {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.counter {
+    font-variant-numeric: tabular-nums;
+}
