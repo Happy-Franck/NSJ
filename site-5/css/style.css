@@ -124,8 +124,8 @@ h1, h2, h3, h4 { font-family: var(--ff-d); line-height: 1.12; letter-spacing: -.
 
 /* Marquee */
 .marquee { overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 0; background: var(--surface-2); margin-top: 12px; }
-.marquee__track { display: flex; gap: 0; white-space: nowrap; width: max-content; animation: scrollx 28s linear infinite; }
-.marquee__track span { font-family: var(--ff-d); font-weight: 700; font-size: .9rem; letter-spacing: .1em; color: var(--text-soft); }
+.marquee__track { display: flex; gap: 0; white-space: nowrap; width: max-content; animation: scrollx 84s linear infinite; will-change: transform; }
+.marquee__track span { flex-shrink: 0; white-space: nowrap; font-family: var(--ff-d); font-weight: 700; font-size: .9rem; letter-spacing: .1em; color: var(--text-soft); }
 @keyframes scrollx { to { transform: translateX(-50%); } }
 
 /* Sections */
