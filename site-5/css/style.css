@@ -70,9 +70,20 @@ h1, h2, h3, h4 { font-family: var(--ff-d); line-height: 1.12; letter-spacing: -.
 /* Header */
 .header { position: fixed; inset: 0 0 auto 0; z-index: 100; background: color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: background .35s, border-color .35s; }
 .header__inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
-.logo { display: flex; align-items: baseline; gap: 7px; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo__img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--border); }
 .logo__mark { font-family: var(--ff-d); font-weight: 800; font-size: 1.4rem; color: var(--orange); letter-spacing: -.03em; }
 .logo__text { font-weight: 600; font-size: .82rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text); }
+.nav a[aria-current="page"] { color: var(--orange-ink); }
+
+/* Bannière métiers (accueil) */
+.banner-band { padding: 36px 0; }
+.banner-band img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
+
+/* En-tête de sous-page */
+.page-hero { padding: 124px 0 54px; background: var(--surface-2); border-bottom: 1px solid var(--border); }
+.page-hero h1 { font-size: clamp(2rem, 4.4vw, 3rem); font-weight: 800; margin: 8px 0 14px; }
+.page-hero .lead { margin: 0; max-width: 640px; }
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a { font-size: .95rem; font-weight: 500; color: var(--text-soft); transition: color .2s; }
 .nav a:hover { color: var(--text); }

@@ -53,7 +53,7 @@
                     <a href="contact.html" class="nav-link text-ink-500 hover:text-ink-900 text-[13px] font-semibold tracking-wide uppercase transition-colors">Contact</a>
                 </div>
                 <div class="flex items-center gap-3">
-                    <a href="devis.html" class="hidden md:inline-flex items-center gap-2 bg-ink-900 hover:bg-ink-800 text-white px-6 py-2.5 rounded-full text-[13px] font-semibold transition-colors">
+                    <a href="#devis" class="hidden md:inline-flex items-center gap-2 bg-ink-900 hover:bg-ink-800 text-white px-6 py-2.5 rounded-full text-[13px] font-semibold transition-colors">
                         Devis gratuit
                         <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                     </a>
@@ -84,7 +84,7 @@
             <a href="contact.html" class="mob-link px-4 py-3 rounded-xl text-ink-600 hover:bg-ink-50 font-medium transition-colors">Contact</a>
         </div>
         <div class="mt-auto">
-            <a href="devis.html" class="flex items-center justify-center gap-2 bg-ink-900 text-white w-full py-3.5 rounded-full font-semibold text-sm hover:bg-ink-800 transition-colors">Devis gratuit</a>
+            <a href="#devis" class="flex items-center justify-center gap-2 bg-ink-900 text-white w-full py-3.5 rounded-full font-semibold text-sm hover:bg-ink-800 transition-colors">Devis gratuit</a>
         </div>
     </div>
 
@@ -131,7 +131,7 @@
                         <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-3 border border-ink-100"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 flex-shrink-0"></i><span class="text-sm font-medium text-ink-700">Associations</span></div>
                         <div class="flex items-center gap-2.5 bg-white rounded-xl px-4 py-3 border border-ink-100"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 flex-shrink-0"></i><span class="text-sm font-medium text-ink-700">Mandataires jud.</span></div>
                     </div>
-                    <a href="devis.html" class="inline-flex items-center gap-2 bg-ink-900 hover:bg-ink-800 text-white px-7 py-3.5 rounded-full text-sm font-bold transition-all hover:shadow-lg hover:-translate-y-0.5">Demander un devis <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    <a href="#devis" class="inline-flex items-center gap-2 bg-ink-900 hover:bg-ink-800 text-white px-7 py-3.5 rounded-full text-sm font-bold transition-all hover:shadow-lg hover:-translate-y-0.5">Demander un devis <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
             </div>
         </div>
@@ -214,6 +214,87 @@
     </section>
 
 
+    <!-- ===== DEVIS GRATUIT ===== -->
+    <section id="devis" class="py-20 md:py-28 bg-ink-50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-400 via-brand-500 to-brand-600"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-50 rounded-full blur-3xl translate-y-1/3 translate-x-1/4"></div>
+        <div class="max-w-6xl mx-auto px-5 lg:px-10 relative z-10">
+            <div class="text-center mb-12 sr">
+                <span class="text-brand-500 text-[11px] font-bold tracking-[0.2em] uppercase">Devis gratuit</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 mb-3">Obtenez Votre Devis Gratuit</h2>
+                <p class="text-ink-500 text-base">Réponse personnalisée sous 24h, sans engagement.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <form id="devisForm" class="lg:col-span-2 bg-white border border-ink-100 rounded-3xl p-6 md:p-10 sr">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                        <div class="float-group"><input type="text" id="fNom" required placeholder=" "><label for="fNom">Nom *</label></div>
+                        <div class="float-group"><input type="text" id="fPrenom" required placeholder=" "><label for="fPrenom">Prénom *</label></div>
+                        <div class="float-group"><input type="tel" id="fTel" required placeholder=" "><label for="fTel">Téléphone *</label></div>
+                        <div class="float-group"><input type="email" id="fEmail" required placeholder=" "><label for="fEmail">Email *</label></div>
+                    </div>
+                    <div class="float-group mb-5"><input type="text" id="fAddr" placeholder=" "><label for="fAddr">Adresse du chantier</label></div>
+                    <div class="float-group mb-5">
+                        <select id="fPresta" required>
+                            <option value="" disabled selected></option>
+                            <option value="conciergerie">Conciergerie</option>
+                            <option value="nettoyage">Entretien &amp; Nettoyage</option>
+                            <option value="nettoyage-extreme">Nettoyage Extrême</option>
+                            <option value="debarras">Débarras</option>
+                            <option value="renovation">Rénovation</option>
+                            <option value="corps-etat">Tous Corps d'État</option>
+                            <option value="serrurerie">Serrurerie</option>
+                            <option value="transport">Transport</option>
+                            <option value="bricolage">Bricolage</option>
+                            <option value="espaces-verts">Espaces Verts</option>
+                            <option value="deratisation">Dératisation &amp; Désinsectisation</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        <label for="fPresta">Type de prestation *</label>
+                    </div>
+                    <div class="float-group mb-5"><textarea id="fMsg" required rows="4" placeholder=" "></textarea><label for="fMsg">Décrivez votre besoin *</label></div>
+                    <div class="mb-8">
+                        <label class="block text-ink-500 text-xs font-semibold mb-2 uppercase tracking-wider">Photos (optionnel)</label>
+                        <input type="file" multiple accept="image/*" class="w-full text-sm text-ink-500 file:mr-4 file:py-2.5 file:px-5 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-ink-900 file:text-white hover:file:bg-ink-800 file:cursor-pointer file:transition-colors">
+                    </div>
+                    <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-brand-500 hover:bg-brand-600 text-white px-10 py-4 rounded-full text-[15px] font-bold transition-all hover:shadow-xl hover:shadow-brand-500/25 hover:-translate-y-0.5">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        Obtenir mon devis gratuit
+                    </button>
+                    <p class="text-ink-400 text-xs mt-4">En soumettant ce formulaire, vous acceptez d'être recontacté par NSJ Multiservice.</p>
+                </form>
+
+                <aside class="space-y-4 sr sr-delay-2">
+                    <div class="bg-ink-900 text-white rounded-3xl p-7">
+                        <h3 class="font-bold text-lg mb-4">Besoin d'une réponse rapide ?</h3>
+                        <a href="tel:+33600000000" class="flex items-center gap-3 mb-3 group">
+                            <div class="w-11 h-11 bg-brand-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"><i data-lucide="phone" class="w-5 h-5 text-brand-400"></i></div>
+                            <div><div class="text-xs text-ink-400">Téléphone</div><div class="font-semibold text-sm">06 00 00 00 00</div></div>
+                        </a>
+                        <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20une%20prestation%20NSJ%20Multiservice." target="_blank" rel="noopener" class="flex items-center gap-3 group">
+                            <div class="w-11 h-11 bg-green-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"><i data-lucide="message-circle" class="w-5 h-5 text-green-400"></i></div>
+                            <div><div class="text-xs text-ink-400">WhatsApp</div><div class="font-semibold text-sm">Envoyer un message</div></div>
+                        </a>
+                    </div>
+                    <div class="bg-brand-50 border border-brand-100 rounded-3xl p-7">
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3"><i data-lucide="clock-3" class="w-5 h-5 text-brand-600 mt-0.5 flex-shrink-0"></i><div><div class="font-semibold text-sm">Réponse sous 24h</div><p class="text-ink-500 text-xs leading-relaxed">Un devis détaillé et transparent.</p></div></div>
+                            <div class="flex items-start gap-3"><i data-lucide="badge-check" class="w-5 h-5 text-brand-600 mt-0.5 flex-shrink-0"></i><div><div class="font-semibold text-sm">Sans engagement</div><p class="text-ink-500 text-xs leading-relaxed">Gratuit et sans obligation.</p></div></div>
+                            <div class="flex items-start gap-3"><i data-lucide="shield-check" class="w-5 h-5 text-brand-600 mt-0.5 flex-shrink-0"></i><div><div class="font-semibold text-sm">Certifié &amp; Assuré</div><p class="text-ink-500 text-xs leading-relaxed">Garantie professionnelle.</p></div></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast" class="toast-msg fixed bottom-24 left-1/2 -translate-x-1/2 z-[80] bg-white border border-green-200 text-ink-900 px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 max-w-sm">
+        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-4 h-4 text-green-600"></i></div>
+        <p class="text-sm font-medium">Votre demande de devis a bien été envoyée !</p>
+    </div>
+
+
     <!-- ===== FOOTER ===== -->
     <footer class="bg-ink-950 text-ink-400 py-14">
         <div class="max-w-[1400px] mx-auto px-5 lg:px-10">
@@ -231,7 +312,7 @@
                 </div>
                 <div>
                     <h4 class="text-white font-bold text-sm mb-4">Navigation</h4>
-                    <ul class="space-y-2 text-sm"><li><a href="index.html" class="hover:text-brand-400 transition-colors">Accueil</a></li><li><a href="services.html" class="hover:text-brand-400 transition-colors">Nos services</a></li><li><a href="realisations.html" class="hover:text-brand-400 transition-colors">Réalisations</a></li><li><a href="a-propos.html" class="hover:text-brand-400 transition-colors">À propos</a></li><li><a href="devis.html" class="hover:text-brand-400 transition-colors">Devis gratuit</a></li><li><a href="contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li></ul>
+                    <ul class="space-y-2 text-sm"><li><a href="index.html" class="hover:text-brand-400 transition-colors">Accueil</a></li><li><a href="services.html" class="hover:text-brand-400 transition-colors">Nos services</a></li><li><a href="realisations.html" class="hover:text-brand-400 transition-colors">Réalisations</a></li><li><a href="a-propos.html" class="hover:text-brand-400 transition-colors">À propos</a></li><li><a href="#devis" class="hover:text-brand-400 transition-colors">Devis gratuit</a></li><li><a href="contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li></ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold text-sm mb-4">Contact</h4>

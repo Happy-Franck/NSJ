@@ -60,7 +60,8 @@
     { icon: 'derat', title: 'Dératisation & Désinsectisation', text: 'Traitement et prévention contre nuisibles et insectes.' }
   ];
   const grid = document.getElementById('servicesGrid');
-  if (grid) grid.innerHTML = services.map(function (s, i) {
+  const servicesLimit = grid && grid.dataset.limit ? parseInt(grid.dataset.limit, 10) : services.length;
+  if (grid) grid.innerHTML = services.slice(0, servicesLimit).map(function (s, i) {
     return '<article class="service' + (s.wide ? ' service--wide' : '') + '" data-reveal style="transition-delay:' + (i % 4) * 60 + 'ms">' +
       '<div class="service__ic">' + svg(I[s.icon]) + '</div>' +
       '<h3>' + s.title + '</h3><p>' + s.text + '</p>' +
@@ -109,7 +110,8 @@
   ];
   const catLabel = { nettoyage: 'Nettoyage', debarras: 'Débarras', renovation: 'Rénovation', 'espaces-verts': 'Espaces verts' };
   const galleryEl = document.getElementById('gallery');
-  if (galleryEl) galleryEl.innerHTML = gallery.map(function (g) {
+  const galleryLimit = galleryEl && galleryEl.dataset.limit ? parseInt(galleryEl.dataset.limit, 10) : gallery.length;
+  if (galleryEl) galleryEl.innerHTML = gallery.slice(0, galleryLimit).map(function (g) {
     return '<div class="ba-card" data-cat="' + g.cat + '" data-reveal>' +
       '<div class="ba">' +
       '<img class="ba__img ba__after" src="' + g.after + '" alt="' + g.title + ' après" loading="lazy">' +
@@ -151,12 +153,14 @@
   /* ---------- Lightbox ---------- */
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
-  document.addEventListener('click', function (e) {
-    const z = e.target.closest('[data-zoom]');
-    if (z) { lbImg.src = z.dataset.zoom; lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false'); return; }
-    if (e.target === lb || e.target.closest('#lbClose')) { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); }
-  });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); } });
+  if (lb) {
+    document.addEventListener('click', function (e) {
+      const z = e.target.closest('[data-zoom]');
+      if (z) { lbImg.src = z.dataset.zoom; lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false'); return; }
+      if (e.target === lb || e.target.closest('#lbClose')) { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); }
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); } });
+  }
 
   /* ---------- Avis ---------- */
   const reviews = [
